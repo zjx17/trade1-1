@@ -9,6 +9,15 @@ Rails.application.routes.draw do
   resources :products, only: [:show] do
     get :search, on: :collection
   end
+  resources :products
+  namespace :product do
+    resources :publishes do
+      resources :publish_images, only: [:index, :create, :destroy, :update]
+    end
+  end
+  namespace :products do
+    resources :publishes 
+  end
   resources :shopping_carts
   resources :addresses do
     member do
@@ -36,7 +45,7 @@ Rails.application.routes.draw do
     end
 
     resources :orders, only: [:index]
-    resources :addresses, only: [:index]
+    resources :addresses, only: [:index,:create]
   end
 
   namespace :admin do

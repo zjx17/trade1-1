@@ -4,7 +4,7 @@ class CreateShoppingCarts < ActiveRecord::Migration[5.0]
       t.integer :user_id
       t.string :user_uuid
       t.integer :product_id
-      t.integer :amount
+      t.string :amount
       t.timestamps
     end
 

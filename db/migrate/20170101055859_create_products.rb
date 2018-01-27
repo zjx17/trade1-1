@@ -4,7 +4,7 @@ class CreateProducts < ActiveRecord::Migration[5.0]
       t.integer :category_id
       t.string :title
       t.string :status, default: 'off'
-      t.integer :amount, default: 0
+      t.string :amount, default: 0
       t.string :uuid
       t.decimal :msrp, precision: 10, scale: 2
       t.decimal :price, precision: 10, scale: 2

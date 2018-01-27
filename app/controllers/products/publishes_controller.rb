@@ -1,10 +1,6 @@
-class AddressesController < ApplicationController
-
-  layout false
+class Products::PublishesController < ApplicationController
   before_action :auth_user
-  before_action :find_address, only: [:edit, :update, :destroy, :set_default_address]
-  before_action :find_root_categories, only: [:new, :create, :edit, :update]
-  before_action :find_category, only: [:edit, :update, :destroy]
+  before_action :fetch_home_data
   before_action :find_product, only: [:edit, :update, :destroy]
 
   def index
@@ -23,7 +19,7 @@ class AddressesController < ApplicationController
 
     if @product.save
       flash[:notice] = "创建成功"
-      redirect_to product_publishes_path
+      redirect_to products_publishes_path
     else
       render action: :new
     end
@@ -39,7 +35,7 @@ class AddressesController < ApplicationController
     @root_categories = Category.roots
     if @product.save
       flash[:notice] = "修改成功"
-      redirect_to product_publishes_path
+      redirect_to admin_products_path
     else
       render action: :new
     end
@@ -48,7 +44,7 @@ class AddressesController < ApplicationController
   def destroy
     if @product.destroy
       flash[:notice] = "删除成功"
-      redirect_to product_publishes_path
+      redirect_to admin_products_path
     else
       flash[:notice] = "删除失败"
       redirect_to :back
@@ -59,21 +55,4 @@ class AddressesController < ApplicationController
   def find_product
     @product = Product.find(params[:id])
   end
-  def address_params
-    params.require(:address).permit(:contact_name, :cellphone, :address,
-      :zipcode, :set_as_default)
-  end
-
-  def find_address
-    @address = current_user.addresses.find(params[:id])
-  end
-
-  def find_root_categories
-    @root_categories = Category.roots.order(id: "desc")
-  end
-
-  def find_category
-    @category = Category.find(params[:id])
-  end
-
 end

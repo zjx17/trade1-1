@@ -1,5 +1,5 @@
 GEM
-  remote: https://ruby.taobao.org/
+  remote: https://gems.ruby-china.org/
   specs:
     actioncable (5.0.1)
       actionpack (= 5.0.1)
@@ -99,7 +99,6 @@ GEM
     multi_json (1.12.1)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
-    mysql2 (0.4.5)
     nio4r (1.2.1)
     nokogiri (1.6.8.1)
       mini_portile2 (~> 2.1.0)
@@ -116,6 +115,7 @@ GEM
       cocaine (~> 0.5.5)
       mime-types
       mimemagic (~> 0.3.0)
+    pg (0.18.4)
     rack (2.0.1)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -226,8 +226,8 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
-  mysql2 (>= 0.3.18, < 0.5)
   paperclip (~> 5.0.0)
+  pg (~> 0.18.4)
   rails (~> 5.0.0, >= 5.0.0.1)
   rails-controller-testing
   rest-client

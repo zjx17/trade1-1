@@ -3,7 +3,7 @@ class CreateOrders < ActiveRecord::Migration[5.0]
     create_table :orders do |t|
       t.integer :user_id, :product_id, :address_id
       t.string :order_no
-      t.integer :amount
+      t.string :amount
       t.decimal :total_money, precision: 10, scale: 2
       t.datetime :payment_at
       t.timestamps
