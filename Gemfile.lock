@@ -227,7 +227,7 @@ DEPENDENCIES
   jquery-rails
   listen (~> 3.0.5)
   paperclip (~> 5.0.0)
-  pg (~> 0.18.4)
+  pg
   rails (~> 5.0.0, >= 5.0.0.1)
   rails-controller-testing
   rest-client
@@ -243,4 +243,4 @@ DEPENDENCIES
   will_paginate
 
 BUNDLED WITH
-   1.13.6
+   1.16.1
