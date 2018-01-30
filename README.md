@@ -44,7 +44,7 @@
 
 ### 五.使用
 
-项目已经部署到了Heroku，访问地址：https://trade1-1.herokuapp.com/ [点击](https://trade1-1.herokuapp.com/)查看
+项目已经部署到了Heroku，访问地址：https://trade1-1.herokuapp.com/ 可点击查看
 
 登陆账号：
 
