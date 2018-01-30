@@ -52,3 +52,7 @@
 
 密码：`123456`
 
+### 六.Heroku部署过程及github_push
+
+https://github.com/zjx17/git_push-and-heroku
+
