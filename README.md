@@ -1,69 +1,54 @@
-# Rails实战之B2C商城开发
+# 果壳之家     
+##                 --果壳人自己的信息发布平台
 
-Demo地址: http://rails5-b2c.eggman.tv
+### 一.项目简介
 
-项目具体讲解请参考这里 **[Rails实战之B2C商城开发](http://eggman.tv/c/s-master-rails-by-actions)**
+本项目是为方便国科大师生们的日常学习生活，加快校园内信息的流通而开发。作为一个校园内小范围信息发布平台，其信息发布主体分为四大块：
+* 果壳交友
+* 校园二手
+* 失物招领
+* 果壳求助
 
-为了方便在每节课的代码间进行切换，该课程是通过git tag的方式来组织的，就是每节课对应一个git tag。
+果壳师生可以通过该平台上参与各种集体活动，结交知心朋友；处理和购买二手闲置；寻找遗失物品；求助生活难题等等。
 
-首先clone该项目
+### 二.目前功能
+* 注册登陆
+* 按类别发布信息
+* 查看个人中心
+* 修改用户密码
+* 查看、修改、删除已有发布
+* 按类浏览信息
+* 按需搜索信息
 
-```shell
-$git clone git@github.com:eggmantv/master_rails_by_actions.git
-```
+### 三.项目截图
 
-切换tag
-```shell
-$cd master_rails_by_actions
+#### 首页
+<img src="/lib/首页.png" width="700">  
 
-查看所有标签
-$git tag
-01
-02
-...
+#### 新建发布
+<img src="/lib/新建发布.png" width="700">
 
-切换到第一节课的源码
-$git checkout 01
-```
+#### 我的发布
+<img src="/lib/我的发布.png" width="700">   
 
-[蛋人网](https://eggman.tv) EGGMAN.TV
+#### 具体信息
+<img src="/lib/具体信息.png" width="700">
 
-# 项目介绍
-该项目主要是我们自己开发的用于教学目的一个开源项目，项目基于Rails 5，实现的功能就是传统的B2C电商平台中常用的功能，包括:
+### 四.说明
+目前使用的库和数据库：
 
-- 用户注册登录（支持手机验证码或者邮箱）
-- 购物车
-- 收货地址
-- 订单
-- 支付（集成了支付宝支付功能）
-- 后台管理功能（涵盖商品管理，商品图片，一二级分类）
-- 前台其他相关功能（比如商品搜索，分类页面，单品页，用户中心）
-- RSpec单元测试
+* 使用[Bootstrap](http://getbootstrap.com/)作为前端库
+* 使用[Postgresql](http://postgresapp.com/)作为数据库
 
-项目使用技术:
+使用前需要安装Bundler，Gem，Ruby，Rails等依赖环境。
 
--  ruby 2.3
-- rails 5
-- mysql  
+### 五.使用
 
-前台框架:
+项目已经部署到了Heroku，[点击](https://trade-ucas.herokuapp.com/)查看
 
-- bootstrap
-- font-awesome  
+登陆账号：
 
-涉及到的主要Gem:
+账号：`heulk1234@163.com`
 
-- sorcery
-- ancestry
-- paperclip
-- rest-client
-- rspec
+密码：`123456`
 
-适用对象：
-
-- ruby和rails的初学者
-- 想从产品或者技术角度学习电商平台核心设计功能的同学
-
-# 安装
-
-Ruby和Ruby on Rails环境的安装请参考这里: [Ruby和Ruby on Rails开发环境搭建](https://eggman.tv/blogs/how-to-setup-your-ruby-on-rails-development-environment)

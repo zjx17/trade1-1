@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180106145614) do
+ActiveRecord::Schema.define(version: 20180130113420) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -97,6 +97,7 @@ ActiveRecord::Schema.define(version: 20180106145614) do
     t.string   "callperson"
     t.string   "author"
     t.string   "phonenumber"
+    t.string   "publiserid"
     t.index ["category_id"], name: "index_products_on_category_id", using: :btree
     t.index ["status", "category_id"], name: "index_products_on_status_and_category_id", using: :btree
     t.index ["title"], name: "index_products_on_title", using: :btree
